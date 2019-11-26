@@ -14,7 +14,6 @@ function initialize() {
   };
   var mapOptions = {
     zoom: 11,
-    // center: new google.maps.LatLng( 18.5204, 73.8567 ),
     center: myLatLng
   };
   map = new google.maps.Map(mapElement, mapOptions);
@@ -38,7 +37,6 @@ function geocode(e) {
       key: geoKey
     }
   }).then(function (res) {
-    // Log res
     var latitude = res.data.results[0].geometry.location.lat;
     var longitude = res.data.results[0].geometry.location.lng;
     var latitudeOutput = "\n        <label>Latitude: </label>\n        <input type=\"text\" id=\"latitude-input\" value=\"".concat(latitude, "\" placeholder=\"").concat(latitude, "\" />\n      ");
@@ -55,7 +53,6 @@ function geocode(e) {
       lng: longitude
     });
     marker.setMap(map);
-    console.log('setCenter');
   })["catch"](function (err) {
     console.log(err);
   });

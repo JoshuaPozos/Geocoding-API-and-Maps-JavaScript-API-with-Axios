@@ -8,7 +8,6 @@ function initialize() {
   const myLatLng = { lat: 19.4326018, lng: -99.1332049 };
   let mapOptions = {
     zoom: 11,
-    // center: new google.maps.LatLng( 18.5204, 73.8567 ),
     center: myLatLng
   };
   map = new google.maps.Map(mapElement, mapOptions);
@@ -36,7 +35,6 @@ function geocode(e) {
       }
     })
     .then(res => {
-      // Log res
       const latitude = res.data.results[0].geometry.location.lat;
       const longitude = res.data.results[0].geometry.location.lng;
 
@@ -57,7 +55,6 @@ function geocode(e) {
       map.setZoom(18);
       marker.setPosition({ lat: latitude, lng: longitude });
       marker.setMap(map);
-      console.log('setCenter');
     })
     .catch(err => {
       console.log(err);
