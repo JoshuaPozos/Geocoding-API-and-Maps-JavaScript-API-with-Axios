@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Geocoding and Maps with Axios</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <h1>Geocoding API and Maps JavaScript API with Axios</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col m-5 text-center">
+        <form id="address-location">
+          <label>Set Address: </label>
+          <input type="text" id="address-location-input" class="input-lg">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col col-md-4 mb-5 mx-auto">
+        <div id="latitude"></div>
+      </div>
+      <div class="col col-md-4 mb-5 mx-auto">
+        <div id="longitude"></div>
+      </div>
+      <div class="col-12">
+        <div id="map" style="height: 500px;width: 100%;"></div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./build/main.js" type="text/javascript"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initialize"></script>
+</body>
+
+</html>
